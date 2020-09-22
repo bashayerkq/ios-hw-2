@@ -30,11 +30,27 @@ import UIKit
  #
  اكثر من 40 -> سمنة مفرطه
 */
+var height = 1.5
+var weight = 49.3
+var BMI = Double()
+func BMI(BMI: Double) -> String {
+   var BMI = weight/height
+    print(BMI)
+    if BMI < 18.5 {
+        return "ضعيف"
+    }
+    else if BMI >= 18.5 {
+        return "وزن طبيعي"
+    }
+    else if BMI >= 30.1 {
+        return "سمنة خفيفة"
+    }
+    else if BMI > 40 {
+        return "سمنة مفرطة"
+    }
+}
 
-
-
-
-
+print(BMI)
 //: # 2️⃣  السؤال الثاني
 
 /*:
@@ -51,4 +67,15 @@ import UIKit
   #
  و اذا كان فوق ١٨ سوف يتم طباعة نص بأن المتقدم يُسمح له بإمتلاك رخصة قيادة
 */
-
+var name = String()
+var age = Int()
+func license(name: String, age: Int){
+    if age < 18 {
+        print("المتقدم لم يكمل العمر المطلوب")
+    }
+    else if age > 18 {
+        print("المتقدم يسمح له بإمتلاك رخصة القيادة")
+    }
+}
+license(name: "bashayer", age: 15)
+license(name: "sara", age: 20)
